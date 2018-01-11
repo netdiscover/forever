@@ -29,6 +29,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         mLogCat = (TextView) findViewById(R.id.mLogCat);
+
+
+        createObservable();
+        createObserver();
+        subscrible();
     }
 
     //创建被观察者
@@ -43,7 +48,6 @@ public class MainActivity extends Activity {
                 emitter.onComplete();
                 printLogCat("subscribe... e.onComplete()...");
             }
-
         });
     }
     //创建观察者
